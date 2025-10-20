@@ -35,6 +35,7 @@ def main():
         for obj in drawable:
             obj.draw(screen)
         updatable.update(dt)
+        player.shoot_cooldown -= dt
         for asteroid in asteroids:
             if asteroid.collision(player):
                 print("GAME OVER!")
